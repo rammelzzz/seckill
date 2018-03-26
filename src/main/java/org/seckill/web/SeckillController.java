@@ -37,7 +37,7 @@ public class SeckillController {
                 List<Seckill> list = seckillService.getSeckillList();
                 logger.info("list={}", list);
                 model.addAttribute("list", list);
-                return "list ";
+                return "list";
         }
 
         @RequestMapping(value = "/{seckillId}/detail", method = RequestMethod.GET)
@@ -83,12 +83,12 @@ public class SeckillController {
                         return new SeckillResult<SeckillExecution>(true, execution);
                 } catch (RepeatKillException e) {
                         SeckillExecution execution = new SeckillExecution(seckillId, SeckillState.REPEAE_KILL);
-                        return new SeckillResult<SeckillExecution>(false, execution);
+                        return new SeckillResult<SeckillExecution>(true, execution);
                 } catch (SeckillCloseException e) {
                         SeckillExecution execution = new SeckillExecution(seckillId, SeckillState.END);
-                        return new SeckillResult<SeckillExecution>(false, execution);
+                        return new SeckillResult<SeckillExecution>(true, execution);
                 } catch (Exception e) {
-                        result = new SeckillResult<SeckillExecution>(false, e.getMessage());
+                        result = new SeckillResult<SeckillExecution>(true, e.getMessage());
                 }
 
                 return result;
