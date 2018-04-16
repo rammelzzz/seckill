@@ -62,7 +62,7 @@ public class SeckillServiceImplTest {
         //业务流程单元测试
         @Test
         public void testSeckillLogic() throws Exception {
-                long id = 1001L;
+                long id = 1003L;
                 long userPhone = 18888888888L;
                 Exposer exposer = seckillService.exportSeckillUrl(id);
                 if(exposer.isExposed()) {

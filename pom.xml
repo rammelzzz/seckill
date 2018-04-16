@@ -120,6 +120,27 @@
       <artifactId>spring-test</artifactId>
      <version>4.1.7.RELEASE</version>
     </dependency>
+
+    <!-- redis客户端Jedis -->
+    <dependency>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+      <version>2.7.3</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.dyuproject.protostuff/protostuff-core -->
+    <dependency>
+      <groupId>com.dyuproject.protostuff</groupId>
+      <artifactId>protostuff-core</artifactId>
+      <version>1.1.3</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.dyuproject.protostuff/protostuff-runtime -->
+    <dependency>
+      <groupId>com.dyuproject.protostuff</groupId>
+      <artifactId>protostuff-runtime</artifactId>
+      <version>1.1.3</version>
+    </dependency>
+
   </dependencies>
   <build>
     <finalName>seckill</finalName>
